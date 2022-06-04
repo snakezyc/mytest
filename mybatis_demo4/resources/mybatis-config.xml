@@ -4,7 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="datasource.properties"/>
-
+    
+    <settings>
+        <!--更改自动映射级别，以完成在复杂结果集中的自动映射-->
+        <setting name="autoMappingBehavior" value="FULL"/>
+    </settings>
+    
     <typeAliases>
         <package name="cn.yunhe.pojo" />
     </typeAliases>
